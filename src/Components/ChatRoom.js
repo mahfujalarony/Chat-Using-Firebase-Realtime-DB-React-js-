@@ -38,7 +38,6 @@ function ChatRoom() {
     const currentUser = auth.currentUser;
     if (!currentUser) return;
 
-    const otherUserUid = chatId.replace(currentUser.uid, '').replace('_', '');
 
     const messageData = {
       text: newMessage,
