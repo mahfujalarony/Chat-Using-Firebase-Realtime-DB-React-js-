@@ -38,8 +38,6 @@ function ChatRoom() {
     const currentUser = auth.currentUser;
     if (!currentUser) return;
 
-    const otherUserUid = chatId.replace(currentUser.uid, '').replace('_', '');
-
     const messageData = {
       text: newMessage,
       uid: currentUser.uid,
@@ -83,7 +81,6 @@ function ChatRoom() {
         <div ref={messageRef} />
       </div>
 
- 
       <div className="border-t bg-white p-3 sticky bottom-0">
         <form onSubmit={sendMessage} className="flex items-center gap-2">
           <input
